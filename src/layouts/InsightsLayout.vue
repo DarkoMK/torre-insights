@@ -58,6 +58,11 @@ export default {
     return {
       rightDrawer: true
     }
+  },
+  created() {
+    this.$root.$on('toggle_right_drawer', () => {
+      this.rightDrawer = !this.rightDrawer
+    })
   }
 }
 </script>

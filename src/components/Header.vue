@@ -14,11 +14,12 @@
           View on GitHub
         </q-tooltip>
       </q-btn>
-      <q-btn :icon="$q.dark.mode ? 'brightness_7' : 'brightness_4'" dense flat @click="$q.dark.toggle()">
+      <q-btn :icon="$q.dark.mode ? 'brightness_7' : 'brightness_4'" dense flat round @click="$q.dark.toggle()">
         <q-tooltip>
           Toggle Dark Mode
         </q-tooltip>
       </q-btn>
+      <q-btn v-if="$q.screen.lt.md &&  rightDrawerShownOn.includes($router.currentRoute.name)" dense flat icon="menu" round @click="emitToggleRightDrawer"/>
     </q-toolbar>
   </q-header>
 </template>
@@ -34,7 +35,14 @@
 export default {
   name: 'Header',
   data() {
-    return {}
+    return {
+      rightDrawerShownOn: ['insights']
+    }
+  },
+  methods: {
+    emitToggleRightDrawer() {
+      this.$root.$emit('toggle_right_drawer')
+    }
   }
 }
 </script>
