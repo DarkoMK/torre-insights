@@ -3,7 +3,7 @@
     <q-header elevated>
       <q-toolbar>
         <q-avatar>
-          <q-img contain src="~/assets/torre_logo_small.png"></q-img>
+          <q-img src="~/assets/torre_logo_hero.png" contain width="36px"></q-img>
         </q-avatar>
         <q-toolbar-title>
           Torre Insights
