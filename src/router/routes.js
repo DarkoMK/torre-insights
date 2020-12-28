@@ -1,10 +1,24 @@
-
 const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      {
+        path: '',
+        name: 'home',
+        component: () => import('pages/Index.vue'),
+      }
+    ]
+  },
+  {
+    path: '/insights',
+    component: () => import('layouts/InsightsLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'insights',
+        component: () => import('pages/Insights.vue')
+      }
     ]
   },
 

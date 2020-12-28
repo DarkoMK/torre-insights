@@ -1,36 +1,23 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-avatar>
-          <q-img src="~/assets/torre_logo_hero.png" contain width="36px"></q-img>
-        </q-avatar>
-        <q-toolbar-title>
-          Torre Insights
-        </q-toolbar-title>
-        <q-btn dense flat href="https://github.com/DarkoMK/torre-insights" icon="fab fa-github" round target="_blank" type="a">
-          <q-tooltip>
-            View on GitHub
-          </q-tooltip>
-        </q-btn>
-        <q-btn :icon="$q.dark.mode ? 'brightness_7' : 'brightness_4'" dense flat @click="$q.dark.toggle()">
-          <q-tooltip>
-            Toggle Dark Mode
-          </q-tooltip>
-        </q-btn>
-      </q-toolbar>
-    </q-header>
+  <q-layout view="hHh lpR fFf">
+    <Header></Header>
     <q-page-container>
       <router-view/>
     </q-page-container>
   </q-layout>
 </template>
 
+<style scoped>
+</style>
+
 <script>
+import Header from "components/Header";
 
 export default {
   name: 'MainLayout',
-  components: {},
+  components: {
+    Header
+  },
   data() {
     return {}
   }
