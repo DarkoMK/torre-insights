@@ -1,4 +1,3 @@
-/*
-export function someMutation (state) {
-}
-*/
+export const updateInsightsState = (state, data) => {
+  state.data = data
+}// call -> store.commit("insights/updateInsightsState", data)
