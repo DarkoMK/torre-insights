@@ -30,6 +30,10 @@ export default {
         })
         .catch(e => {
           // error handling
+          this.$q.notify({
+            type: 'negative',
+            message: 'An error occurred. Please try again later.'
+          })
           this.loading = false
         })
     }
