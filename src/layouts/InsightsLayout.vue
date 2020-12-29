@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <Header></Header>
+    <t-header></t-header>
     <q-drawer v-model="rightDrawer" bordered show-if-above side="right">
       <q-list separator>
         <q-expansion-item
@@ -52,7 +52,7 @@ import Header from "components/Header";
 export default {
   name: 'InsightsLayout',
   components: {
-    Header
+    't-header': Header
   },
   data() {
     return {

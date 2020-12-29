@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <Header></Header>
+    <t-header></t-header>
     <q-page-container>
       <router-view/>
     </q-page-container>
@@ -16,7 +16,7 @@ import Header from "components/Header";
 export default {
   name: 'MainLayout',
   components: {
-    Header
+    't-header': Header
   },
   data() {
     return {}
