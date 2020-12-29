@@ -2,6 +2,9 @@
   <div>
     <l-map
       :center="center"
+      :maxBounds="maxBounds"
+      :maxBoundsViscosity="maxBoundsViscosity"
+      :minZoom="minZoom"
       :zoom="zoom"
       style="height: 500px; width: 100%"
     >
@@ -26,7 +29,7 @@ import {
   LCircle,
   LPopup,
 } from "vue2-leaflet";
-import {latLng} from "leaflet";
+import {latLng, latLngBounds} from "leaflet";
 import 'leaflet/dist/leaflet.css';
 
 export default {
@@ -40,6 +43,9 @@ export default {
   data() {
     return {
       zoom: 3,
+      minZoom: 1,
+      maxBounds: latLngBounds(latLng(-89.98155760646617, -180), latLng(89.99346179538875, 180)),
+      maxBoundsViscosity: 0,
       center: [47.31322, -1.319482],
       circle: {
         center: latLng(47.41322, -1.0482),
