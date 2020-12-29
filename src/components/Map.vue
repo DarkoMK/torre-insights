@@ -8,7 +8,7 @@
     >
       <l-tile-layer
         :attribution="attribution"
-        :url="url"
+        :url="$q.dark.mode ? darkLayerUrl : lightLayerUrl"
       />
       <l-circle
         :lat-lng="circle.center"
@@ -26,9 +26,6 @@ import {
   LMap,
   LTileLayer,
   LCircle,
-  LRectangle,
-  LPolygon,
-  LPolyline,
   LPopup,
 } from "vue2-leaflet";
 import {latLng} from "leaflet";
@@ -50,7 +47,8 @@ export default {
         center: latLng(47.41322, -1.0482),
         radius: 4500
       },
-      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      lightLayerUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      darkLayerUrl: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
       attribution: '&copy; Torre Insights'
     };
   }
