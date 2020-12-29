@@ -1,5 +1,4 @@
 <template>
-
   <div>
     <l-map
       :center="center"
@@ -18,7 +17,6 @@
       </l-circle>
     </l-map>
   </div>
-
 </template>
 
 <script>
