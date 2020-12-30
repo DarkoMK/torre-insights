@@ -12,8 +12,9 @@
           Get familiar with the type of developers that are using Torre for their professional growth. Check out which developer roles are most present and their most loved technologies.
         </q-card-section>
         <q-separator inset/>
-        <q-card-section>
-          <q-btn label="830.000 profiles analysed" no-caps outline size="lg"/>
+        <q-card-section class="q-gutter-x-md">
+          <q-btn :label="$store.state.insights.data.total + ' profile(s) analysed'" no-caps outline size="lg"/>
+          <q-btn :label="$store.state.insights.data.map.length + ' have known location'" no-caps outline size="lg"/>
         </q-card-section>
         <q-separator inset/>
         <q-card-section>

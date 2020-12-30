@@ -1,7 +1,9 @@
 export default function () {
   return {
     data: {
-      map: {}
+      total: 0,
+      map: [],
+      success: false
     }
   }
 }

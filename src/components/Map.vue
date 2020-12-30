@@ -13,10 +13,12 @@
         :url="$q.dark.mode ? darkLayerUrl : lightLayerUrl"
       />
       <l-circle
-        :lat-lng="circle.center"
-        :radius="circle.radius"
+        v-for="c in $store.state.insights.data.map"
+        :key="c.name"
+        :lat-lng="c.center"
+        :radius="c.radius*10000"
       >
-        <l-popup content="Circle"/>
+        <l-popup :content="c.name"/>
       </l-circle>
     </l-map>
   </div>
@@ -47,10 +49,6 @@ export default {
       maxBounds: latLngBounds(latLng(-89.98155760646617, -180), latLng(89.99346179538875, 180)),
       maxBoundsViscosity: 0,
       center: [47.31322, -1.319482],
-      circle: {
-        center: latLng(47.41322, -1.0482),
-        radius: 4500
-      },
       lightLayerUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       darkLayerUrl: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
       attribution: '&copy; Torre Insights'
