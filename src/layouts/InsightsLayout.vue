@@ -28,10 +28,19 @@
 
           <q-item v-ripple :inset-level="1" clickable>
             <q-item-section avatar>
-              <q-icon name="recent_actors"/>
+              <q-icon name="work"/>
             </q-item-section>
             <q-item-section>
-              <q-item-label>Developer Roles</q-item-label>
+              <q-item-label>Remote work</q-item-label>
+            </q-item-section>
+          </q-item>
+
+          <q-item v-ripple :inset-level="1" clickable>
+            <q-item-section avatar>
+              <q-icon name="attach_money"/>
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>Compensation Range</q-item-label>
             </q-item-section>
           </q-item>
 
@@ -40,7 +49,7 @@
               <q-icon name="military_tech"/>
             </q-item-section>
             <q-item-section>
-              <q-item-label>Experience</q-item-label>
+              <q-item-label>Skills</q-item-label>
             </q-item-section>
           </q-item>
         </q-expansion-item>
