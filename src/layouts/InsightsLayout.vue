@@ -17,7 +17,7 @@
           icon="folder_shared"
           label="Developer Statistics"
         >
-          <q-item v-ripple :inset-level="1" clickable>
+          <q-item v-ripple :inset-level="1" clickable @click="scrollTo('map')">
             <q-item-section avatar>
               <q-icon name="map"/>
             </q-item-section>
@@ -26,7 +26,7 @@
             </q-item-section>
           </q-item>
 
-          <q-item v-ripple :inset-level="1" clickable>
+          <q-item v-ripple :inset-level="1" clickable @click="scrollTo('remoter')">
             <q-item-section avatar>
               <q-icon name="work"/>
             </q-item-section>
@@ -35,7 +35,7 @@
             </q-item-section>
           </q-item>
 
-          <q-item v-ripple :inset-level="1" clickable>
+          <q-item v-ripple :inset-level="1" clickable @click="scrollTo('compensations')">
             <q-item-section avatar>
               <q-icon name="attach_money"/>
             </q-item-section>
@@ -44,7 +44,7 @@
             </q-item-section>
           </q-item>
 
-          <q-item v-ripple :inset-level="1" clickable>
+          <q-item v-ripple :inset-level="1" clickable @click="scrollTo('skills')">
             <q-item-section avatar>
               <q-icon name="military_tech"/>
             </q-item-section>
@@ -65,6 +65,9 @@
 
 <script>
 import Header from "components/Header";
+import {scroll} from 'quasar'
+
+const {setScrollPosition, getScrollPosition} = scroll
 
 export default {
   name: 'InsightsLayout',
@@ -74,6 +77,14 @@ export default {
   data() {
     return {
       rightDrawer: true
+    }
+  },
+  methods: {
+    scrollTo(id) {
+      let el = document.getElementById(id)
+      const {top} = el.getBoundingClientRect()
+      const offset = Math.max(0, getScrollPosition(window) + top - 66)
+      setScrollPosition(window, offset, 300)
     }
   },
   created() {

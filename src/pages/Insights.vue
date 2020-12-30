@@ -20,29 +20,29 @@
         </q-card-section>
 
         <q-separator inset/>
-        <q-card-section>
 
+        <q-card-section id="map">
           <div class="text-h6">Map</div>
           <t-map></t-map>
         </q-card-section>
 
         <q-separator inset/>
 
-        <q-card-section>
+        <q-card-section id="remoter">
           <div class="text-h6">People willing to work remotely</div>
           <pie-chart :data="$store.state.insights.data.remoter.data" :labels="$store.state.insights.data.remoter.labels"></pie-chart>
         </q-card-section>
 
         <q-separator inset/>
 
-        <q-card-section>
+        <q-card-section id="compensations">
           <div class="text-h6">Stated compensations statistics</div>
           <horizontal-bar-chart :data="$store.state.insights.data.compensationrange.data" :labels="$store.state.insights.data.compensationrange.labels" label="Compensations stated"></horizontal-bar-chart>
         </q-card-section>
 
         <q-separator inset/>
 
-        <q-card-section>
+        <q-card-section id="skills">
           <div class="text-h6">Skills available in the organization</div>
           <bar-chart :data="$store.state.insights.data.skill.data" :labels="$store.state.insights.data.skill.labels" label="Skills"></bar-chart>
         </q-card-section>
