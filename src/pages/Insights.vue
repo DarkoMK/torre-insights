@@ -30,6 +30,7 @@
 
         <q-card-section>
           <div class="text-h6">People willing to work remotely</div>
+          <pie-chart :data="$store.state.insights.data.remoter.data" :labels="$store.state.insights.data.remoter.labels"></pie-chart>
         </q-card-section>
 
         <q-separator inset/>
@@ -50,11 +51,13 @@
 
 <script>
 import Map from "components/Map";
+import PieChart from "components/Charts/PieChart";
 
 export default {
   name: 'Insights',
   components: {
-    't-map': Map
+    't-map': Map,
+    PieChart
   },
   data() {
     return {}
