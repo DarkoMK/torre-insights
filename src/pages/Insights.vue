@@ -37,6 +37,7 @@
 
         <q-card-section>
           <div class="text-h6">Stated compensations statistics</div>
+          <horizontal-bar-chart :data="$store.state.insights.data.compensationrange.data" :labels="$store.state.insights.data.compensationrange.labels"></horizontal-bar-chart>
         </q-card-section>
 
         <q-separator inset/>
@@ -52,12 +53,14 @@
 <script>
 import Map from "components/Map";
 import PieChart from "components/Charts/PieChart";
+import HorizontalBarChart from "components/Charts/HorizontalBarChart";
 
 export default {
   name: 'Insights',
   components: {
     't-map': Map,
-    PieChart
+    PieChart,
+    HorizontalBarChart
   },
   data() {
     return {}
