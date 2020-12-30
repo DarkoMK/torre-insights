@@ -2,7 +2,15 @@
   <q-layout view="hHh lpR fFf">
     <t-header></t-header>
     <q-drawer v-model="rightDrawer" bordered show-if-above side="right">
-      <q-list separator>
+      <q-list>
+        <q-item v-ripple :to="{name: 'home'}" clickable exact>
+          <q-item-section avatar>
+            <q-icon name="home"/>
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Main Page</q-item-label>
+          </q-item-section>
+        </q-item>
         <q-expansion-item
           default-opened
           expand-separator
