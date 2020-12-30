@@ -6,7 +6,10 @@ export default function () {
         labels: [],
         data: []
       },
-      skill: [],
+      skill: {
+        labels: [],
+        data: []
+      },
       compensationrange: {
         labels: [],
         data: []

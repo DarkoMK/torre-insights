@@ -37,13 +37,14 @@
 
         <q-card-section>
           <div class="text-h6">Stated compensations statistics</div>
-          <horizontal-bar-chart :data="$store.state.insights.data.compensationrange.data" :labels="$store.state.insights.data.compensationrange.labels"></horizontal-bar-chart>
+          <horizontal-bar-chart :data="$store.state.insights.data.compensationrange.data" :labels="$store.state.insights.data.compensationrange.labels" label="Compensations stated"></horizontal-bar-chart>
         </q-card-section>
 
         <q-separator inset/>
 
         <q-card-section>
           <div class="text-h6">Skills available in the organization</div>
+          <bar-chart :data="$store.state.insights.data.skill.data" :labels="$store.state.insights.data.skill.labels" label="Skills"></bar-chart>
         </q-card-section>
       </q-card>
     </q-page>
@@ -54,13 +55,15 @@
 import Map from "components/Map";
 import PieChart from "components/Charts/PieChart";
 import HorizontalBarChart from "components/Charts/HorizontalBarChart";
+import BarChart from "components/Charts/BarChart";
 
 export default {
   name: 'Insights',
   components: {
     't-map': Map,
     PieChart,
-    HorizontalBarChart
+    HorizontalBarChart,
+    BarChart
   },
   data() {
     return {}

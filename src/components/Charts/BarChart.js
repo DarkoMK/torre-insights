@@ -1,4 +1,4 @@
-import {HorizontalBar} from 'vue-chartjs'
+import {Bar} from 'vue-chartjs'
 
 const colorScheme = [
   "#25CCF7", "#FD7272", "#54a0ff", "#00d2d3",
@@ -13,7 +13,7 @@ const colorScheme = [
 ]
 
 export default {
-  extends: HorizontalBar,
+  extends: Bar,
 
   props: {
     label: {
