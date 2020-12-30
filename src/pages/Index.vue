@@ -51,6 +51,10 @@ export default {
   methods: {
     generateData() {
       this.loading = true
+      this.$q.notify({
+        icon: 'info',
+        message: 'Geocoding the locations may take a while.'
+      })
       this.$axios.get('insights/' + this.org.name)
         .then(r => {
           this.$store.commit("insights/updateInsightsState", r.data)
