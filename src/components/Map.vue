@@ -50,7 +50,7 @@ export default {
       maxBoundsViscosity: 0,
       center: [47.31322, -1.319482],
       lightLayerUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      darkLayerUrl: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
+      darkLayerUrl: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
       attribution: '&copy; Torre Insights'
     };
   }
